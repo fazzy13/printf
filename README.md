@@ -68,6 +68,8 @@ Percentage sign: %
 ## Contributions
 This `printf` implementation is a collaborative effort by the ALX Software Engineering Team. If you would like to contribute to this project, please submit a pull request with your changes or report any issues through the repository's issue tracker.
 
+Contributor: [Abu Jehoiada](https://github.com/iFingers007)
+
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 

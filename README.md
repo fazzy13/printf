@@ -12,22 +12,25 @@ To use this custom `printf` function in your C project, follow these steps:
 
 1. Clone the repository to your local machine using the following command:
 
+   """
+      git clone https://github.com/<username>/printf.git
+   """
 
-
-"""git clone https://github.com/<username>/printf.git"""
-
-2. Include the `holberton.h header` file in your `C` source code, which contains the function prototypes and necessary macros.
+3. Include the `holberton.h header` file in your `C` source code, which contains the function prototypes and necessary macros.
 
 `#include "holberton.h"`
 
 3. Compile the `printf` function along with your `C` source code using your preferred compiler, such as `GCC`.
 
-`gcc -Wall -Werror -Wextra -pedantic *.c <your_c_file.c> -o <output_file>`
+"""
+gcc -Wall -Werror -Wextra -pedantic *.c <your_c_file.c> -o <output_file>
+"""
 
 4. Use the `printf` function in your `C` code, similar to how you would use the standard printf function, with format specifiers, field width, precision, and flags.
 
-
-`_printf("Hello, %s! Today is %02d-%02d-%04d\n", "world", 4, 25, 2023);`
+"""
+_printf("Hello, %s! Today is %02d-%02d-%04d\n", "world", 4, 25, 2023);
+"""
 
 5. Compile and run your C program, and the custom printf function will format and print the output according to your format string.
 

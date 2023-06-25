@@ -33,7 +33,7 @@ To use this custom `printf` function in your C project, follow these steps:
 
 ### Examples
 
-"""
+```
 #include "holberton.h"
 
 int main(void)
@@ -51,10 +51,11 @@ int main(void)
 
     return 0;
 }
-"""
+```
 
 `Output:`
-"""
+
+```
 Hello, world! Today is 04-25-2023
 Decimal: 123
 Octal: 173
@@ -62,7 +63,7 @@ Hexadecimal (lowercase): 7b
 Hexadecimal (uppercase): 7B
 Pointer address: 0x7ffeeddaa23c
 Percentage sign: %
-"""
+```
 
 ## Contributions
 This `printf` implementation is a collaborative effort by the ALX Software Engineering Team. If you would like to contribute to this project, please submit a pull request with your changes or report any issues through the repository's issue tracker.

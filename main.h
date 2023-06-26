@@ -14,6 +14,7 @@ int print_string(char *str);
 void print_percent(void);
 void print_integer(int n);
 void print_binary(unsigned int n);
+int handle_d_i(va_list list);
 
 /*helper function*/
 int handle_print(const char *format, int *index, va_list list);

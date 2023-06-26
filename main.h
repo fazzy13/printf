@@ -2,6 +2,8 @@
 #define MAIN_H
 
 #include <stdarg.h> /* for va_list */
+#include <stddef.h>
+#include <stdio.h>
 
 /* Function prototypes */
 int _printf(const char *format, ...);

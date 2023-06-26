@@ -29,6 +29,9 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
+			if (format[i] == '\0')
+				return (-1);
+			/* i++; */
 			/* Handle the conversion specifier using the helper function */
 			printed_chars += handle_print(format, &i, list);
 		}
@@ -81,4 +84,3 @@ int handle_print(const char *format, int *index, va_list list)
 
 	return (printed_chars);
 }
-

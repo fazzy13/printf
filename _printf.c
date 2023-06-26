@@ -56,7 +56,7 @@ int handle_print(const char *format, int *index, va_list list)
 	{
 		char c = va_arg(list, int);
 
-		putchar(c);
+		_putchar(c);
 		printed_chars++;
 	}
 	else if (format[*index] == 's')

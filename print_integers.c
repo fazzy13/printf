@@ -8,7 +8,6 @@ void print_integer(int n)
 {
 	unsigned int num;
 	int digit;
-	int is_negative = 0;
 
 	/* Handle special case for 0 */
 	if (n == 0)
@@ -20,7 +19,6 @@ void print_integer(int n)
 	/* Handle negative numbers */
 	if (n < 0)
 	{
-		is_negative = 1;
 		num = -n;
 		_putchar('-');
 	}

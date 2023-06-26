@@ -51,6 +51,7 @@ void print_binary(unsigned int n)
 	{
 		/* Extract the bit using bitwise shifting and masking */
 		unsigned int bit = (n >> i) & mask;
+
 		_putchar(bit + '0');
 	}
 }

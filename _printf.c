@@ -1,45 +1,19 @@
 #include "main.h"
 
+int print_integer(int n);
 int handle_print(const char *format, int *index, va_list list);
 int _printf(const char *format, ...);
 
 /**
- * _printf - Printf function
- * @format: format.
- * Return: the number of characters printed (excluding the null byte used
- * to end output to strings)
+ * handle_d_i - Handles the 'd' and 'i' conversion specifiers
+ * @list: argument list
+ * Return: the number of characters printed for the current conversion specifier
  */
-int _printf(const char *format, ...)
+int handle_d_i(va_list list)
 {
-	int i, printed_chars = 0;
-	va_list list;
+	int num = va_arg(list, int);
 
-	if (format == NULL)
-		return (-1);
-
-	va_start(list, format);
-
-	for (i = 0; format[i] != '\0'; i++)
-	{
-		if (format[i] != '%')
-		{
-			_putchar(format[i]);
-			printed_chars++;
-		}
-		else
-		{
-			i++;
-			if (format[i] == '\0')
-				return (-1);
-			/* i++; */
-			/* Handle the conversion specifier using the helper function */
-			printed_chars += handle_print(format, &i, list);
-		}
-	}
-
-	va_end(list);
-
-	return (printed_chars);
+	return print_integer(num);
 }
 
 /**
@@ -48,8 +22,7 @@ int _printf(const char *format, ...)
  * @format: format string
  * @index: pointer to the current position in the format string
  * @list: argument list
- * Return: the number of characters printed for the current
- * conversion specifier
+ * Return: the number of characters printed for the current conversion specifier
  */
 int handle_print(const char *format, int *index, va_list list)
 {
@@ -75,12 +48,53 @@ int handle_print(const char *format, int *index, va_list list)
 		_putchar('%');
 		printed_chars++;
 	}
+	else if (format[*index] == 'd' || format[*index] == 'i')
+	{
+		printed_chars += handle_d_i(list);
+	}
 	else
 	{
 		_putchar('%');
 		_putchar(format[*index]);
 		printed_chars += 2;
 	}
+
+	return (printed_chars);
+}
+
+/**
+ * _printf - Printf function
+ * @format: format string
+ * Return: the number of characters printed (excluding the null byte used
+ * to end output to strings)
+ */
+int _printf(const char *format, ...)
+{
+	int i, printed_chars = 0;
+	va_list list;
+
+	if (format == NULL)
+		return (-1);
+
+	va_start(list, format);
+
+	for (i = 0; format[i] != '\0'; i++)
+	{
+		if (format[i] != '%')
+		{
+			_putchar(format[i]);
+			printed_chars++;
+		}
+		else
+		{
+			i++;
+			if (format[i] == '\0')
+				return (-1);
+			printed_chars += handle_print(format, &i, list);
+		}
+	}
+
+	va_end(list);
 
 	return (printed_chars);
 }

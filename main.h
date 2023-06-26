@@ -9,6 +9,13 @@
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _puts(char *str);
+void print_char(char c);
+int print_string(char *str);
+void print_percent(void);
+
+/*helper function*/
+int handle_print(const char *format, int *index, va_list list);
+
 
 #endif /* MAIN_H */
 

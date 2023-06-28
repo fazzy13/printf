@@ -41,6 +41,7 @@ int print_octal(unsigned int n);
 int print_hex(unsigned int n);
 int print_HEX(unsigned int n);
 int print_pointer(void *p); 
+int count_digits(int number);
 
 /* length modifiers */
 int handle_l_modifier(long arg, int (*print_func)(long));

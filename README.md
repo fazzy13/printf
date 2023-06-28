@@ -34,7 +34,7 @@ To use this custom `printf` function in your C project, follow these steps:
 ### Examples
 
 ```
-#include "holberton.h"
+#include "main.h"
 
 int main(void)
 {

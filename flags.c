@@ -51,11 +51,11 @@ int handle_hash_flag(unsigned int arg, int (*print_func)(unsigned int))
 
 	if (arg != 0)
 	{
-		if ((unsigned int (*)(unsigned int))print_func == print_hex)
+		if (print_func == print_hex)
 			printed_chars += _printf("0x");
-		else if ((unsigned int (*)(unsigned int))print_func == print_HEX)
+		else if (print_func == print_HEX)
 			printed_chars += _printf("0X");
-		else if ((unsigned int (*)(unsigned int))print_func == print_octal)
+		else if (print_func == print_octal)
 			printed_chars += _putchar('0');
 	}
 

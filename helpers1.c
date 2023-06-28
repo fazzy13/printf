@@ -76,3 +76,24 @@ int print_pointer(void *p)
 	return (count);
 }
 
+/**
+ * count_digits - Counts the number of digits in an integer.
+ * @number: The integer to count the digits of.
+ *
+ * Return: The number of digits in the integer.
+ */
+int count_digits(int number)
+{
+	int count = 0;
+
+	if (number == 0)
+		return 1; /* Special case for number 0 */
+
+	while (number != 0) {
+		number /= 10;
+		count++;
+	}
+
+	return (count);
+}
+
